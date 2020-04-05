@@ -1,1 +1,74 @@
-
+#The waiter choose the price that the coffee will be priced
+cop=float(input("How much will you charge for coffee? "))
+cap=float(input("How much will you charge for cake "))
+print("Coffee is " ,cop)
+print("Cake is ",cap)
+choice=input("Would you like coffee or cake or both ")
+#Stage 1 selection
+if choice=="coffee":
+  print("you chose coffee")
+#stage 1a amount
+  aoco=int(input("How many do you want? "))
+#stage 1b total price 
+  total=aoco*cop
+  print("Your total sums up to  £",total)
+elif choice=="cake":
+  print("You chose cake")
+  #stage 1a amount
+  aoca=int(input("How many do you want? "))
+#stage 1b total price 
+  total=aoca*cap
+  print("Your total sums up to  £",total)
+elif choice=="both":
+  print("you chose both")
+  #stage 1a amount
+  aoco=int(input("How many cups of coffee do you want? "))
+  aoca=int(input("How many plates of cake do you want? "))
+  #stage 1b total price 
+  total=(aoco*cop)+(aoca*cap)
+  print("Your total sums up to  £",total)
+else:
+  print("Not a valid answer")
+#stage 2a change
+money=float(input("How much money do you have? "))
+change=money-total
+print ("Your change is £",change)
+while change > 0:
+  if change > 49.99:
+    change=change-50
+    print('50')
+  elif change > 19.99:
+    change=change-20
+    print('20')
+  elif change > 9.99:
+    change=change-10
+    print('10')
+  elif change > 4.99:
+    change=change-5
+    print('5')
+  elif change > 1.99:
+    change=change-2
+    print('2')
+  elif change > 0.99:
+    change=change-1
+    print('1')
+  elif change > 0.49:
+    change=change-0.5
+    print('0.5')
+  elif change > 0.19:
+    change=change-0.2
+    print('0.2')
+  elif change > 0.09:
+    change=change-0.1
+    print('0.1')
+  elif change > 0.04:
+    change=change-0.05
+    print('0.05')
+  elif change > 0.01:
+    change=change-0.02
+    print('0.02')
+  elif change > 0:
+    change=change-0.01
+    print('0.01')
+else:
+  print('done')
