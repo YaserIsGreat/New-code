@@ -33,42 +33,80 @@ else:
 money=float(input("How much money do you have? "))
 change=money-total
 print ("Your change is £",change)
+#stage 3a do you have?
+
+fiftynotes=int(input('How many 50 notes do you have?'))
+twentynotes=int(input('How many 20 notes do you have?'))
+tennotes=int(input('How many 10 notes do you have?'))
+fivenotes=int(input('How many 5 notes do you have?'))
+twocoins=int(input('How many 2 coins do you have?'))
+onecoins=int(input('How many 1 coins do you have?'))
+fiftyp=int(input('How many 50p do you have?'))
+twentyp=int(input('How many 20p do you have?'))
+tenp=int(input('How many 10p do you have?'))
+fivep=int(input('How many 5p do you have?'))
+twop=int(input('How many 2p do you have?'))
+onep=int(input('How many 1p do you have?'))
 while change > 0:
-  if change > 49.99:
-    change=change-50
-    print('50')
-  elif change > 19.99:
-    change=change-20
-    print('20')
-  elif change > 9.99:
-    change=change-10
-    print('10')
-  elif change > 4.99:
-    change=change-5
-    print('5')
-  elif change > 1.99:
-    change=change-2
-    print('2')
-  elif change > 0.99:
-    change=change-1
-    print('1')
-  elif change > 0.49:
-    change=change-0.5
-    print('0.5')
-  elif change > 0.19:
-    change=change-0.2
-    print('0.2')
-  elif change > 0.09:
-    change=change-0.1
-    print('0.1')
-  elif change > 0.04:
-    change=change-0.05
-    print('0.05')
-  elif change > 0.01:
-    change=change-0.02
-    print('0.02')
-  elif change > 0:
-    change=change-0.01
-    print('0.01')
+  while fiftynotes > 0:
+        if change >49.99:
+            change=change-50
+            print('50')
+            fiftynotes=fiftynotes-1
+        while twentynotes>0:
+            if change > 19.99:
+                change=change-20
+                print('20')
+                twentynotes=twentynotes-1
+            while tennotes>0:
+                if change > 9.99:
+                    change=change-10
+                    print('10')
+                    tennotes=tennotes-1
+                while fivenotes>0:
+                    if change > 4.99:
+                        change=change-5
+                        print('5')
+                        fivenotes=fivenotes-1
+                    while twocoins>0:
+                        if change > 1.99:
+                            change=change-2
+                            print('2')
+                            twocoins=twocoins-1
+                        while onecoins>0:
+                            if change > 0.99:
+                                change=change-1
+                                print('1')
+                                onecoins=onecoins-1
+                            while fiftyp>0:
+                                if change > 0.49:
+                                    change=change-0.5
+                                    print('0.5')
+                                    fiftyp=fiftyp-1
+                                while twentyp>0:
+                                    if change > 0.19:
+                                        change=change-0.2
+                                        print('0.2')
+                                        twentyp=twentyp-1
+                                    while tenp>0:
+                                        if change > 0.09:
+                                            change=change-0.1
+                                            print('0.1')
+                                            tenp=tenp-1
+                                        while fivep>0:
+                                            if change > 0.04:
+                                                change=change-0.05
+                                                print('0.05')
+                                                fivep=fivep-1
+                                            while twop>0:
+                                                if change > 0.01:
+                                                    change=change-0.02
+                                                    print('0.02')
+                                                    twop=twop-1
+                                                while onep>0:
+                                                    if change > 0:
+                                                        change=change-0.01
+                                                        print('0.01')
+                                                        onep=onep-1
 else:
   print('done')
